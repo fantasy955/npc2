@@ -1,0 +1,65 @@
+gpu: '3'
+
+###reproducibility
+fix_seed: True
+seed: 2022
+
+###model setting
+train: True
+fix_bn: True
+multi_gpu: False
+model: res50
+init_weight: None
+pretrained: False
+extra: False
+bottleneck: True
+
+setting: uda
+transfer_all: False
+### Optimizer
+lr: 0.003
+momentum: 0.9
+weight_decay: 0.0005
+power: 0.75
+gamma: 10
+num_steps: 10000
+pretrain: True
+pretrain_steps: 500
+val_freq: 500
+stage_size: 1000
+save_freq: 500
+####dataloader
+num_workers: 0
+num_sample: 8
+num_pclass: 8
+batch_size: 64
+
+task: visda
+source: train
+target: validation
+
+### Stopping criteria for clustering searching
+k_converge: True
+interval: 1
+max_search: 3
+drop_stop: True
+drop: 4
+drop_con: True
+search_stop: True
+
+### Visualization
+note: train
+screen: False
+print_freq: 1
+
+### loss
+lam_con_t: 0.1
+lam_con_s: 0.02
+neighbor_k: 3  # for neighbor center
+con_gamma: 0.04
+
+history_memory_update_rate: 1
+
+root: {
+        visda: /media/ubuntu/7d17c4ae-0255-4946-a82e-1ebcb5295708/datasets/VisDA2017,
+}

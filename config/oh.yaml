@@ -1,0 +1,65 @@
+gpu: '1'
+
+###reproducibility
+fix_seed: True
+seed: 2022
+
+###model setting
+train: True
+fix_bn: True
+multi_gpu: False
+model: res50
+init_weight: None
+pretrained: False
+extra: False
+bottleneck: True
+
+setting: uda
+transfer_all: True
+### Optimizer
+lr: 0.001
+momentum: 0.9 
+weight_decay: 0.0005
+power: 0.75 
+gamma: 10
+num_steps: 3000
+pretrain: True
+pretrain_steps: 400
+val_freq: 100
+stage_size: 200
+save_freq: 100
+####dataloader
+num_workers: 0
+num_sample: 8
+num_pclass: 8
+batch_size: 64
+
+task: officehome
+source: Clipart
+target: Art
+
+### pseudo label generation
+k_converge: True
+interval: 5
+max_search: 5
+drop_stop: True
+drop: 4
+drop_con: True
+search_stop: True
+
+### Visualization
+note: train
+screen: False
+print_freq: 1
+
+
+### loss
+lam_con_t: 0.1
+lam_con_s: 0.02
+neighbor_k: 5  # for neighbor center
+con_gamma: 0.05
+history_memory_update_rate: 1
+
+root: {
+        officehome:  /media/ubuntu/7d17c4ae-0255-4946-a82e-1ebcb5295708/datasets/office-home,
+        }

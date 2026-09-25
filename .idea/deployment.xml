@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="4gpu_server">
+    <serverData>
+      <paths name="1gpu">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="4gpu_server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/ubuntu/7d17c4ae-0255-4946-a82e-1ebcb5295708/weijl/NPC2EM2" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
